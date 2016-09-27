@@ -1,0 +1,21 @@
+@mixin base_sizes {
+  height: 100%;
+  min-height: 100%;
+  width:100%
+  min-width:100%;
+  margin: 0;
+  padding: 0;
+}
+html{
+  @include base_sizes;
+}
+body {
+  @include base_sizes;
+  font-size: 100%;
+}
+.winter-in-norway {
+  margin: 10rem;
+  .winter-in-norway__img {
+    width: 50rem;
+  }
+}
