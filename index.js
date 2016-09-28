@@ -1,17 +1,13 @@
 'use strict';
 
-const config = require('./config.json');
-const Hapi = require('hapi');
+const configuration = require('./config.json');
+const Express = require('express');
+const server = new Express();
 
-const server = new Hapi.Server();
+server.use(Express.static(`${__dirname}//client`));
 
-server.connection({ port: config.port });
-server.path(__dirname + '/client');
+server.listen(configuration.port);
 
-server.start((err) => {
-
-    if (err) {
-    throw err;
-}
-console.log(`Server running at: ${server.info.uri}`);
+server.get('/', (req, res) => {
+    res.send(200);
 });

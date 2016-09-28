@@ -17,11 +17,11 @@
   },
   "homepage": "https://github.com/Nivelium/Shop#readme",
   "dependencies": {
-    "angular": "^1.5.8",
-    "gulp": "^3.9.1",
-    "gulp-mocha": "^3.0.1",
-    "gulp-sass": "^2.3.2",
-    "hapi": "^15.1.0",
-    "mocha": "^3.1.0"
+    "angular": "1.5.8",
+    "express": "4.14.0",
+    "gulp": "3.9.1",
+    "gulp-mocha": "3.0.1",
+    "gulp-sass": "2.3.2",
+    "mocha": "3.1.0"
   }
 }
