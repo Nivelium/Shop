@@ -1,17 +1,19 @@
 <!DOCTYPE HTML>
-
+<html ng-app="ribbon">
 <HEAD>
     <META charset="UTF-8">
     <link rel=stylesheet href="feed.css">
+    <script src="angular.min.js"></script>
+    <script src="feed-directive.js"></script>
     <title>Лента товаров</title>
 </HEAD>
-<BODY>
-    <header></header>
-    <article class="winter-in-norway">
-        <img src="temp/5462824_xlarge.jpg" alt="Пристань" class="winter-in-norway__img">
-        <img src="temp/68944142.jpg" alt="Вода и горы" class="winter-in-norway__img">
-        <img src="temp/askwallpapers.com-23338.jpg" alt="Фьорды вечером" class="winter-in-norway__img">
-        <img src="temp/motto.net.ua-88619.jpg" alt="Лес на закате" class="winter-in-norway__img">
+<BODY ng-controller='data as data'>
+    <header>
+        <h1 class="header__h1">{{data.info.name}}</h1>
+    </header>
+    <article class="winter-in-norway" >
+        <img ng-repeat="image in data.content.images" ng-src="{{image.src}}" alt="{{image.alt}}" class="{{image.class}}" />
     </article>
     <footer></footer>
 </BODY>
+</html>
